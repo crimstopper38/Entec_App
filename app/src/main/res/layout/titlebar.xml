@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8px"
+    android:paddingBottom="8px">
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginLeft="44px"
+        android:background="@drawable/btn_home" />
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.avatarmind.myapplication">
+
+    <!-- Permissions for robot motion (existing permission) -->
+    <uses-permission android:name="com.avatar.permission.ROBOT_MOTION" />
+
+    <!-- Permissions for Speech-to-Text, Text-to-Speech, and Voice Recognition -->
+    <!-- Allows recording audio for speech recognition -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Allows accessing the internet (required for online speech recognition and TTS) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Allows access to device storage for saving or retrieving speech data (if needed) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Optional: Wake lock permission to prevent the device from sleeping during speech operations -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Allows running a background service for continuous listening -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <receiver android:name=".SpeechCommandReceiver" />
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity android:name=".ArtificialIntelligenceActivity" />
+        <activity android:name=".CybersecurityActivity" />
+        <activity android:name=".NetworkingActivity" />
+        <activity android:name=".DataAnalyticsActivity" />
+        <activity android:name=".ElectricalEngineeringActivity" />
+        <activity android:name=".SoftwareEngineeringActivity" />
+        <activity android:name=".AdvisementInformationActivity" />
+        <activity android:name=".LearningOptionsActivity" />
+        <activity android:name=".ScholarshipsActivity" />
+        <activity android:name=".FinancialAid" />
+        <activity android:name=".StemProgram" />
+        <activity android:name=".general_questions" />
+    </application>
+
+</manifest>
