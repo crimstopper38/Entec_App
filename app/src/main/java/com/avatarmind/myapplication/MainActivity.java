@@ -6,7 +6,7 @@ import android.robot.motion.RobotMotion;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
-
+//test for git
 public class MainActivity extends Activity {
 
     //initialize robot singleton and robot motion
